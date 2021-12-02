@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Html Form</title>
+
+    <style>
+      body {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+      }
+
+      .form {
+        display: flex;
+        flex-direction: column;
+      }
+
+      .label {
+        margin: 7px;
+      }
+
+      .hobbies {
+        display: flex;
+        flex-direction: column;
+      }
+
+      fieldset {
+        margin-block: 5px;
+      }
+
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>Simple Form</h1>
+    </header>
+    <main>
+      <form class="form">
+        <label class="label" for="name"> 
+          First Name <br />
+          <input type="text" name="first-name" id="name" required />
+        </label>
+        <label class="label" for="lastname">
+          Last Name <br />
+          <input type="text" name="lastname" id="lastname" required />
+        </label>
+        <label class="label" for="email">
+          Email <br />
+          <input type="email" name="email" id="email" required />
+        </label>
+        <label class="label" for="dateOfBirth">
+          Date of Birth <br />
+          <input type="date" name="date" id="dateOfBirth" required />
+        </label>
+
+        <label class="label">
+          Genero <br />
+          <select name="gender">
+            <option value="" disabled selected hidden>
+              Selecciona tu Genero
+            </option>
+            <option value="Female">Femenino</option>
+            <option value="Male">Masculino</option>
+          </select>
+        </label>
+
+        <fieldset class="fieldset">
+          <legend>Selecciona tu nivel socio economico</legend>
+          <input type="radio" name="stratum" id="stratum1" />
+          <label class="label" for="stratum1"> estrato 1 </label>
+          <input type="radio" name="" id="stratum2" />
+          <label class="label" for="stratum2"> estrato 2</label>
+          <input type="radio" name="" id="stratum3" />
+          <label class="label" for="stratum3"> estrato 3</label>
+          <input type="radio" name="" id="stratum4" />
+          <label class="label" for="stratum4"> estrato 4</label>
+          <input type="radio" name="" id="stratum5" />
+          <label class="label" for="stratum5"> estrato 5</label>
+        </fieldset>
+        <fieldset class="fieldset" class="hobbies">
+          <legend>Selecciona tu hobby</legend>
+          <label class="label" for="hobby1">
+            <input type="checkbox" name="hobby1" id="hobby1" />
+            Musica 
+          </label>
+          <label class="label" for="hobby2"> 
+            <input type="checkbox" name="hobby2" id="hobby2" /> 
+            Video Juegos
+            </label>
+          <label class="label" for="hobby3"></label>
+            <input type="checkbox" name="hobby3" id="hobby3" />
+            Cocina
+          </label>
+          <label class="label" for="hobby4">
+            <input type="checkbox" name="hobby4" id="hobby4" />
+            Deportes
+          </label>
+        </fieldset>
+        <fieldset class="fieldset">
+          <input type="file" name="search-file" id="search-file" />
+        </fieldset>
+        <button type="submit">Enviar</button>
+      </form>
+    </main>
+  </body>
+</html>
