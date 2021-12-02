@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -8,91 +8,100 @@
     <style>
       body {
         display: flex;
-        flex-direction: column;j
+        flex-direction: column;
         justify-content: center;
         align-items: center;
         width: 100%;
       }
-      form {
+
+      .form {
         display: flex;
         flex-direction: column;
       }
-      label {
+
+      .label {
         margin: 7px;
       }
+
       .hobbies {
         display: flex;
         flex-direction: column;
       }
+
       fieldset {
         margin-block: 5px;
       }
+
     </style>
   </head>
   <body>
-    <header><h1>Simple Form</h1></header>
+    <header>
+      <h1>Simple Form</h1>
+    </header>
     <main>
-      <form>
-        <label for="name"
-          >First Name <br />
+      <form class="form">
+        <label class="label" for="name"> 
+          First Name <br />
           <input type="text" name="first-name" id="fn" required />
         </label>
-        <label for="lastname">
+        <label class="label" for="lastname">
           Last Name <br />
-          <input type="text" name="lastname" required
-        /></label>
-        <label for="email">
+          <input type="text" name="lastname" required />
+        </label>
+        <label class="label" for="email">
           Email <br />
-          <input type="email" name="email" required
-        /></label>
-        <label for="dateOfBirth">
+          <input type="email" name="email" required />
+        </label>
+        <label class="label" for="dateOfBirth">
           Date of Birth <br />
-          <input type="date" name="date" required
-        /></label>
+          <input type="date" name="date" required />
+        </label>
 
-        <label for="gender">
+        <label class="label" for="gender">
           Genero <br />
           <select name="gender">
-            <option value="default">Gender</option>
-            <option value="Femenino">Femenino</option>
-            <option value="Masculino">Masculino</option>
+            <option value="" disabled selected hidden>
+              Selecciona tu Genero
+            </option>
+            <option value="Female">Femenino</option>
+            <option value="Male">Masculino</option>
           </select>
         </label>
 
-        <fieldset>
+        <fieldset class="fieldset">
           <legend>Selecciona tu nivel socio economico</legend>
-          <input type="radio" name="estrato" required />
-          <label for="estrato1"> Estrato 1 </label>
-          <input type="radio" name="" id="estrato2" required />
-          <label for="estrato2"> Estrato 2</label>
-          <input type="radio" name="" id="estrato3" required />
-          <label for="estrato3"> Estrato 3</label>
-          <input type="radio" name="" id="estrato4" required />
-          <label for="estrato4"> Estrato 4</label>
-          <input type="radio" name="" id="estrato5" required />
-          <label for="estrato5"> Estrato 5</label>
+          <input type="radio" name="stratum" />
+          <label class="label" for="stratum1"> estrato 1 </label>
+          <input type="radio" name="" id="stratum2" />
+          <label class="label" for="stratum2"> estrato 2</label>
+          <input type="radio" name="" id="stratum3" />
+          <label class="label" for="stratum3"> estrato 3</label>
+          <input type="radio" name="" id="stratum4" />
+          <label class="label" for="stratum4"> estrato 4</label>
+          <input type="radio" name="" id="stratum5" />
+          <label class="label" for="stratum5"> estrato 5</label>
         </fieldset>
-        <fieldset class="hobbies">
+        <fieldset class="fieldset" class="hobbies">
           <legend>Selecciona tu hobby</legend>
-          <label for="hobby1">
-            <input type="checkbox" name="hobby1" id="hobby1" required />
-            Musica</label
-          >
-          <label for="hobby2"
-            ><input type="checkbox" name="hobby2" id="hobby2" required /> Video
-            Juegos</label
-          >
-          <label for="hobby3"
-            ><input type="checkbox" name="hobby3" id="hobby3" required />
-            Cocina</label
-          >
-          <label for="hobby4"
-            ><input type="checkbox" name="hobby4" id="hobby4" required />
-            Deportes</label
-          >
+          <label class="label" for="hobby1">
+            <input type="checkbox" name="hobby1" id="hobby1" />
+            Musica 
+          </label>
+          <label class="label" for="hobby2"> 
+            <input type="checkbox" name="hobby2" id="hobby2" /> 
+            Video Juegos
+            </label>
+          <label class="label" for="hobby3"></label>
+            <input type="checkbox" name="hobby3" id="hobby3" />
+            Cocina
+          </label>
+          <label class="label" for="hobby4">
+            <input type="checkbox" name="hobby4" id="hobby4" />
+            Deportes
+          </label>
         </fieldset>
-        <fieldset>
-          <input type="file" name="searchFile" id="searchFile" required />
+        <fieldset class="fieldset">
+          <input type="file" name="searchFile" id="searchFile" />
         </fieldset>
         <button type="submit">Enviar</button>
       </form>
